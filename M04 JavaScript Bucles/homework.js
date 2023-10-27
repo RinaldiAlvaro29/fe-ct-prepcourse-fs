@@ -169,7 +169,7 @@ function esPrimo(num) {
       return false;
   }
 
-  for (let i = 2; i <= Math.sqrt(num); i++) {
+  for (let i = 2; i < num; i++) {
       if (num % i === 0) {
           return false; 
       }
@@ -204,9 +204,15 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
-   while (num < 9) {
-      num = num + 5
-   } return "Valor final: " + num;
+   var contador = 0;
+
+    do {
+        num = num + 5; 
+        contador++;
+    } while (contador < 8);   
+      
+    return num;
+    
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
